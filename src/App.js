@@ -1,19 +1,28 @@
-import React from "react";
+import React, { useState }from "react";
 import { Route, Switch, Link } from "react-router-dom";
 import PizzaForm from "./PizzaForm";
+import MyOrder from "./MyOrder";
+
 
 
 const App = () => {
+
+
+const [myOrder, setMyorder] = useState({})
+
+const orderSubmit = (order) => {
+  setMyorder(order)
+  console.log(order)
+}
+
   return (
     <>
      <header className="App-header">
       <h1>Lambda Eats</h1>
        <p>You can remove this code and create your own header</p>
        <nav>
-         <Link to="/pizzaForm/order-pizza">Home</Link>
+         <Link to="/">Home</Link>
          <Link to="/pizzaForm/pizza">Pizza Form</Link>
-         <Link to="/pizzaForm/3"></Link>
-         <Link to="/pizzaform/4"></Link>
        </nav>
      </header>
 
@@ -21,11 +30,14 @@ const App = () => {
        <Switch>
          <Route exact path="/">
            <h4>
-            Click on above link for link for home
+            Click on above link for home
            </h4>
          </Route>
          <Route exact path ="/pizzaForm/:pizza">
-            <PizzaForm />
+            <PizzaForm orderSubmit={orderSubmit} />
+         </Route>
+         <Route exact path="/myOrder">
+            <MyOrder myOrder={myOrder} />
          </Route>
 
        </Switch>
