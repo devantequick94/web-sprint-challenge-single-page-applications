@@ -63,7 +63,7 @@ const PizzaForm = (props) => {
                   <input onChange={formChange}
                    type="text" 
                    name="name" 
-                   id ="pizza-form"
+                   id ="order-form"
                    value={form.name} />
               </label>
               <label>
