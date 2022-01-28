@@ -10,7 +10,7 @@ const App = () => {
       <h1>Lambda Eats</h1>
        <p>You can remove this code and create your own header</p>
        <nav>
-         <Link to="/">Home</Link>
+         <Link to="/pizzaForm/order-pizza">Home</Link>
          <Link to="/pizzaForm/pizza">Pizza Form</Link>
          <Link to="/pizzaForm/3"></Link>
          <Link to="/pizzaform/4"></Link>
