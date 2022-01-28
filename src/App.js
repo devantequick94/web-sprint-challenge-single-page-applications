@@ -24,7 +24,7 @@ const App = () => {
             Click on above link for link for home
            </h4>
          </Route>
-         <Route exact path ="/pizza-form/:pizza">
+         <Route exact path ="/pizzaForm/:pizza">
             <PizzaForm />
          </Route>
 
