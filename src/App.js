@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch, Link } from "react-router-dom";
-import OrderForm from "./PizzaForm";
+import PizzaForm from "./PizzaForm";
 
 
 const App = () => {
@@ -11,9 +11,9 @@ const App = () => {
        <p>You can remove this code and create your own header</p>
        <nav>
          <Link to="/">Home</Link>
-         <Link to="/pizza-form/pizza-form">Pizza Form</Link>
-         <Link to="/pizza-form/3"></Link>
-         <Link to="/pizza-form/4"></Link>
+         <Link to="/pizzaForm/pizza">Pizza Form</Link>
+         <Link to="/pizzaForm/3"></Link>
+         <Link to="/pizzaform/4"></Link>
        </nav>
      </header>
 
@@ -24,7 +24,7 @@ const App = () => {
             Click on above link for link for home
            </h4>
          </Route>
-         <Route exact path ="/pizza-form/:pizza-form">
+         <Route exact path ="/pizza-form/:pizza">
             <PizzaForm />
          </Route>
 

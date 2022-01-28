@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 
 
-const OrderForm = (props) => {
+const PizzaForm = (props) => {
 
     const { pizza } = useParams()
 
