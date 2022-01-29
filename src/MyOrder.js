@@ -1,7 +1,6 @@
 import React from 'react';
 
-
-const MyOrder = (props) => {
+function MyOrder (props) {
 
     const {myOrder} = props
     return (
@@ -12,6 +11,8 @@ const MyOrder = (props) => {
           <p>name: {myOrder.name}</p>
           <p>size: {myOrder.size}</p>  
           
+
+
           
           
         </section>

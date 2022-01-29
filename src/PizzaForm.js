@@ -15,21 +15,11 @@ const initialForm = {
         TOS: false
 
     }
-
-const [errors, setErrors] = useState({
        
-        name: "",
-        size: "",
-        Olives: false,
-        Cheese: false,
-        Pepperoni: false,
-        Sausage: false,
-        TOS: false
-
-    })
-
-
      
+       
+       
+
 
     const PizzaForm = (props) => {
     let history = useHistory()
@@ -49,6 +39,17 @@ const [errors, setErrors] = useState({
         TOS: yup.boolean().oneOf([true], "You must click agree to continue")
     })
 
+    const [errors, setErrors] = useState({
+       
+        name: "",
+        size: "",
+        Olives: false,
+        Cheese: false,
+        Pepperoni: false,
+        Sausage: false,
+        TOS: false
+
+    })
     
     
     const [disabled, setDisabled] = useState(true)
@@ -89,7 +90,7 @@ const [errors, setErrors] = useState({
          .then(()=>{
              setErrors({...errors, [evt.target.name]: ""})
          })
-         .catch((error)=>{
+         .catch((errors)=>{
              setErrors({...errors,[evt.target.name]: errors[0]})
          })
     }
@@ -149,7 +150,6 @@ const [errors, setErrors] = useState({
                   <input onChange={formChange} type="checkbox" name="TOS" />
               </label>
               <button type="submit" disabled={disabled}>ORDER NOW!</button>
-              <Pizza neworder = {newOrder}/>
           </form>
           <p>{errors.name}</p>
           <p>{errors.size}</p>
